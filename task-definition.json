@@ -1,23 +1,24 @@
 {
   "family": "survey_tool-task",
+  "executionRoleArn": "arn:aws:iam::897067486570:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "containerDefinitions": [
     {
       "name": "survey_tool-container",
-      "image": "your-image:latest",
+      "image": "YOUR_ECR_REPO_URI:TAG",
       "essential": true,
       "portMappings": [
         {
-          "containerPort": 5000,
-          "hostPort": 5000,
+          "containerPort": 80,
           "protocol": "tcp"
         }
-      ],
-      "memory": 512,
-      "cpu": 256
+      ]
+      // ... other container settings
     }
   ],
-  "requiresCompatibilities": ["FARGATE"],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
   "cpu": "256",
   "memory": "512"
 }
