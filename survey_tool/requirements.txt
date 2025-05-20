@@ -1,7 +1,0 @@
-flask
-pymongo
-python-dotenv
-pandas
-matplotlib
-seaborn
-jupyter
