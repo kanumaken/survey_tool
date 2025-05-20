@@ -1,0 +1,31 @@
+{
+  "family": "survey_tool-task",              // Your task family name (any descriptive name)
+  "networkMode": "awsvpc",                   // Use 'awsvpc' if deploying with Fargate
+  "containerDefinitions": [
+    {
+      "name": "survey_tool-container",      // Must match your workflow CONTAINER_NAME
+      "image": "replace-with-your-image",   // This will be replaced by GitHub Actions, so just keep a placeholder
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 5000,            // Change if your app listens on a different port
+          "hostPort": 5000,
+          "protocol": "tcp"
+        }
+      ],
+      "memory": 512,                        // Memory in MB (adjust to your app's needs)
+      "cpu": 256,                           // CPU units (adjust to your app's needs)
+      "environment": [                      // Optional: add env vars your app needs here
+        {
+          "name": "ENV_VAR_NAME",
+          "value": "value"
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",                            // Total CPU for task
+  "memory": "512"                         // Total memory for task
+}
