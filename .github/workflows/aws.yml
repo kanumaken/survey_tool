@@ -9,7 +9,7 @@ env:
   ECR_REPOSITORY: survey_tool-repo              # your ECR repository name
   ECS_SERVICE: survey_tool-service              # your ECS service name
   ECS_CLUSTER: survey_tool-cluster              # your ECS cluster name
-  ECS_TASK_DEFINITION: .aws/task-definition.json # path to your ECS task definition
+  ECS_TASK_DEFINITION: task-definition.json     # path to your ECS task definition
   CONTAINER_NAME: survey_tool-container         # container name used in task definition
 
 permissions:
