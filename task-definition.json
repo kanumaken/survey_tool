@@ -13,7 +13,7 @@
           "protocol": "tcp"
         }
       ]
-      // ... other container settings
+    
     }
   ],
   "requiresCompatibilities": [
