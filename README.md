@@ -67,10 +67,11 @@ If you're using **MongoDB Atlas**, update your connection string in `app.py` acc
 python app.py
 ```
 
----
+
 
 ## 📂 Project Structure
 
+```
 survey_tool/
 │
 ├── app.py                         # Main Flask application
@@ -95,6 +96,7 @@ survey_tool/
 │
 └── notebooks/                    # Jupyter Notebooks for analysis
     └── data_analysis.ipynb       # Visualizations and insights
+
 
 
 ---
